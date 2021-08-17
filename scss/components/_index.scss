@@ -1,0 +1,108 @@
+@import "colors";
+@import "responsive";
+@import "mixins";
+
+/* CONTAINER 1 */
+
+.banner-index1{
+    position: relative;
+    width: 100%;
+    height: 630px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    @include laptop{
+        height: 460px;
+    }
+    @include tablet{
+        height: 400px;
+    }
+    @include mobile{
+        height: 300px;
+    }
+    &__overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #00000056;
+    &__video{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    }
+    &__absolute{
+        width: 100%;
+        height: 100%;
+        top: 40%;
+        right: 0;
+        position: absolute;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* CONTAINER 2 */
+
+.text-index{
+    padding: 60px 120px 60px 120px;
+    @include laptop{
+        padding: 40px 80px 40px 80px;
+    }
+    @include tablet{
+        padding: 30px 60px 30px 60px;
+    }
+    @include mobile{
+        padding: 15px 30px 15px 30px;
+    }
+}
+
+
+/* CONTAINER 3 */
+
+.banner-index2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background: center fixed url("../media/images/banner_index.png");
+    @include laptop{
+        height: 400px;
+    }
+    @include tablet{
+        height: 300px;
+    }
+    @include mobile{
+        height: 200px;
+    }
+    &__img{
+        width: 90%;
+        max-width: 1000px;
+        display: block;
+        margin: auto;
+    }
+    &__title{
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        text-shadow: 0px 1px 10px rgba(0,0,0,0.82);
+        @include laptop{
+            font-size: 42px;
+        }
+        @include tablet{
+            font-size: 32px;
+        }
+        @include mobile{
+            font-size: 28px;
+        }
+    }
+}
+

@@ -1,0 +1,27 @@
+ // EXTRA LARGE DEVICES
+ @mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// LARGE DEVICES
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}
+
+ // MEDIUM DEVICES
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+// SMALL DEVICES
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+      @content;
+    }
+  }

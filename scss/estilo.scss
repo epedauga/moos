@@ -1,0 +1,108 @@
+@import "colors";
+@import "responsive";
+@import "mixins";
+
+
+@import "components/index";
+@import "components/about";
+@import "components/services";
+@import "components/portfolio";
+@import "components/contact";
+@import "components/header";
+@import "components/footer";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    text-align: justify;
+    background: $colorBG;
+	background-size: cover;
+	background-attachment: fixed;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><rect rx='20' width='100%' height='100%' fill='rgb(222, 53, 67)'/></svg>") 0 0, auto;
+    @include mobile{
+        height: auto;
+    }
+}
+h1{
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color:$colorH1;
+    text-shadow: 0px 1px 10px rgba(0,0,0,0.82);
+    @include laptop{
+        font-size: 50px;
+    }
+    @include tablet{
+        font-size: 40px;
+    }
+    @include mobile{
+        font-size: 40px;
+    }
+}
+h2{
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: none;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    color: $colorH2;
+    @include laptop{
+        margin-top: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    @include tablet{
+        margin-top: 20px;
+        font-size: 28px;
+        text-align: center;
+    }
+    @include mobile{
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+h3{
+    color: $colorH3;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.5rem;
+    @include mobile{
+        font-size: 16px;
+    }
+}
+h4{
+    color: $colorH4;
+    font-family: 'Raleway', sans-serif;
+}
+h5{
+    color: $colorH5;
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    padding: 0.6rem;
+    color: $colorText;
+    @include laptop{
+        font-size: 18px;
+        text-align: justify;
+    }
+    @include tablet{
+        font-size: 16px;
+        text-align: justify;
+    }
+    @include mobile{
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+
