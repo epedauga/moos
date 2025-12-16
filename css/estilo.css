@@ -792,7 +792,7 @@
           line-height: 32px; } }
       .box__redes a:hover {
         transform: scale(1.2);
-        background: #f1505e;
+        background: #3566ab;
         color: #eeeeee;
         cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25'><rect rx='20' width='100%' height='100%' fill='rgb(238, 238, 238)'/></svg>") 4 0, auto; }
 
