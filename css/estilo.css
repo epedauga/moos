@@ -284,7 +284,7 @@ h2 {
       text-align: center; } }
 
 h3 {
-  color: #fbf4e8;
+  color: #232121;
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
   padding: 0.5rem; }
@@ -293,16 +293,16 @@ h3 {
       font-size: 16px; } }
 
 h4 {
-  color: #fbf4e8;
+  color: #232121;
   font-family: 'Raleway', sans-serif; }
 
 h5 {
-  color: #fbf4e8;
+  color: #232121;
   font-family: 'Raleway', sans-serif; }
 
 p {
   padding: 0.6rem;
-  color: #3b3b3b; }
+  color: #232121; }
   @media (max-width: 1024px) {
     p {
       font-size: 18px;
