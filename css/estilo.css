@@ -243,7 +243,7 @@ body {
       height: auto; } }
 
 h1 {
-  font-size: 70px;
+  font-size: 90px;
   font-weight: 700;
   text-align: center;
   font-family: 'Bebas Neue', serif;
@@ -264,24 +264,24 @@ h2 {
   text-decoration: none;
   letter-spacing: none;
   padding-bottom: 20px;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
   font-family: 'Bebas Neue', serif;
   color: #3566ab; }
   @media (max-width: 1024px) {
     h2 {
       margin-top: 20px;
-      font-size: 50px;
+      font-size: 30px;
       text-align: center; } }
   @media (max-width: 768px) {
     h2 {
       margin-top: 20px;
-      font-size: 40px;
+      font-size: 20px;
       text-align: center; } }
   @media (max-width: 576px) {
     h2 {
       margin-top: 20px;
-      font-size: 40px;
+      font-size: 20px;
       text-align: center; } }
 
 h3 {
