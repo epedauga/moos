@@ -58,7 +58,7 @@
   height: 500px;
   display: flex;
   align-items: center;
-  background: center fixed url("../media/images/banner_index.png"); }
+  background: center fixed url("../media/banner_index.png"); }
   @media (max-width: 1024px) {
     .banner-index2 {
       height: 400px; } }
