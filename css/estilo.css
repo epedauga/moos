@@ -123,7 +123,7 @@
   .pics-portfolio__effect {
     width: 15rem;
     height: 15rem;
-    opacity: .2;
+    opacity: .6;
     margin: 15px;
     transition: all 1s ease; }
     .pics-portfolio__effect:hover {
