@@ -317,22 +317,15 @@ p {
       font-size: 10px;
       text-align: justify; } }
 
-a {
+.link-especial {
   color: #8b3a62;
   text-decoration: none;
   font-weight: 500;
 }
 
-a:hover {
-  color: #c35b8e; /* cuando pasás el mouse */
+.link-especial:hover {
+  color: #c35b8e;
 }
 
-a:visited {
-  color: #8b3a62; /* después de haber sido visitado */
-}
-
-a:active {
-  color: #6a2a4a; /* cuando hacés click */
-}
 
 
