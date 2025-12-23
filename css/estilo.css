@@ -68,11 +68,13 @@
 
 .menu {
   background: none; }
+  .menu .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .menu__logo {
     width: 7rem;
-    padding: 0rem;
-    justify-content: center; 
-    align-items: center; }
+    padding: 0rem; }
 
 .navbar-toggler {
   display: none !important;
