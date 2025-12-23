@@ -71,7 +71,8 @@
   .menu__logo {
     width: 7rem;
     padding: 0rem;
-    position: center; }
+    justify-content: center; 
+    align-items: center; }
    
 .box {
   margin-top: 5%;
