@@ -230,9 +230,9 @@
 
 body {
   font-size: 20px;
-  font-weight: 500;
-  font-family: 'Bebas Neue', serif;
-  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.3px;
   text-align: justify;
   background: #eed1d6;
   background-size: cover;
