@@ -1,45 +1,4 @@
 /* CONTAINER 1 */
-.banner-index1 {
-  position: relative;
-  width: 100%;
-  height: 630px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; }
-  @media (max-width: 1024px) {
-    .banner-index1 {
-      height: 460px; } }
-  @media (max-width: 768px) {
-    .banner-index1 {
-      height: 400px; } }
-  @media (max-width: 576px) {
-    .banner-index1 {
-      height: 300px; } }
-  .banner-index1__overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #00000099; }
-    .banner-index1__overlay__video {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      pointer-events: none; }
-  .banner-index1__absolute {
-    width: 100%;
-    height: 100%;
-    top: 40%;
-    right: 0;
-    position: absolute;
-    text-align: center;
-    display: flex;
-    justify-content: center; }
-
-/* CONTAINER 2 */
 .text-index {
   padding: 60px 120px 60px 120px; }
   @media (max-width: 1024px) {
@@ -52,7 +11,7 @@
     .text-index {
       padding: 15px 30px 15px 30px; } }
 
-/* CONTAINER 3 */
+/* CONTAINER 2 */
 .banner-index2 {
   width: 100%;
   height: 500px;
@@ -89,30 +48,6 @@
       .banner-index2__title {
         font-size: 28px; } }
 
-/* BANNER */
-.banner-portfolio {
-  width: 100%;
-  height: 700px;
-  display: flex; }
-  @media (max-width: 1024px) {
-    .banner-portfolio {
-      height: 450px; } }
-  @media (max-width: 768px) {
-    .banner-portfolio {
-      height: 350px; } }
-  @media (max-width: 576px) {
-    .banner-portfolio {
-      height: 350px; } }
-  .banner-portfolio img {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    background: center;
-    padding-top: 60px; }
-    @media (max-width: 576px) {
-      .banner-portfolio img {
-        padding-top: 0; } }
-
 /* GALLERY */
 .pics-portfolio {
   display: flex;
@@ -130,25 +65,6 @@
       opacity: 2;
       -webkit-transform: scale(1.2);
       transform: scale(1.2); }
-
-/* BANNER */
-.banner-contact {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background: center fixed url("../media/images/banner_contact.png"); }
-  @media (max-width: 576px) {
-    .banner-contact {
-      height: 150px; }
-      .banner-contact h1 {
-        font-size: 24px; } }
-  .banner-contact__info {
-    width: 90%;
-    max-width: 1000px;
-    display: block;
-    margin: auto; }
 
 .menu {
   background: none; }
@@ -317,13 +233,13 @@ p {
       font-size: 10px;
       text-align: justify; } }
 
-.link-especial {
+.link-andrevisuales {
   color: #8b3a62;
   text-decoration: none;
   font-weight: 500;
 }
 
-.link-especial:hover {
+.link-andrevisuales:hover {
   color: #c35b8e;
 }
 
