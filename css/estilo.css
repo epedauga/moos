@@ -193,7 +193,7 @@
   .box__redes {
     position: absolute;
     text-align: center;
-    min-width: 200px;
+    min-width: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center; }
