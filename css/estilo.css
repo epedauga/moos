@@ -230,8 +230,8 @@
 
 body {
   font-size: 20px;
-  font-weight: 100;
-  font-family: 'Bebas Neue', bold;
+  font-weight: 500;
+  font-family: 'Bebas Neue', serif;
   letter-spacing: 1px;
   text-align: justify;
   background: #eed1d6;
@@ -246,7 +246,7 @@ h1 {
   font-size: 70px;
   font-weight: 700;
   text-align: center;
-  font-family: 'Bebas Neue', bold;
+  font-family: 'Bebas Neue', serif;
   color: #fbf4e8;
   text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.82); }
   @media (max-width: 1024px) {
@@ -264,8 +264,8 @@ h2 {
   text-decoration: none;
   letter-spacing: none;
   padding-bottom: 20px;
-  font-weight: 400;
-  font-family: 'Bebas Neue', bold;
+  font-weight: 700;
+  font-family: 'Bebas Neue', serif;
   color: #3566ab; }
   @media (max-width: 1024px) {
     h2 {
@@ -285,8 +285,8 @@ h2 {
 
 h3 {
   color: #232121;
-  font-weight: 600;
-  font-family: 'Bebas Neue', bold;
+  font-weight: 700;
+  font-family: 'Bebas Neue', serif;
   padding: 0.5rem; }
   @media (max-width: 576px) {
     h3 {
@@ -294,11 +294,11 @@ h3 {
 
 h4 {
   color: #232121;
-  font-family: 'Bebas Neue', bold; }
+  font-family: 'Bebas Neue', serif; }
 
 h5 {
   color: #232121;
-  font-family: 'Bebas Neue', bold; }
+  font-family: 'Bebas Neue', serif; }
 
 p {
   padding: 0.6rem;
