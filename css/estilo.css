@@ -74,7 +74,18 @@
   align-items: center; }
   .menu__logo {
     width: 7rem;
-    padding: 0rem; }
+    padding: 0rem;
+    display: block; }
+  @media (max-width: 576px) {
+  .menu__logo {
+    width: 5rem; } }
+  @media (min-width: 577px) and (max-width: 991px) {
+  .menu__logo {
+    width: 6rem; } }
+  @media (min-width: 992px) {
+  .menu__logo {
+    width: 7rem; } }
+
 
 .navbar-toggler {
   display: none !important;
