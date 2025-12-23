@@ -73,6 +73,10 @@
     padding: 0rem;
     justify-content: center; 
     align-items: center; }
+
+.navbar-toggler {
+  display: none !important;
+}
    
 .box {
   margin-top: 5%;
