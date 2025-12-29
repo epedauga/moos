@@ -229,15 +229,15 @@ p {
   color: #232121; }
   @media (max-width: 1024px) {
     p {
-      font-size: 18px;
+      font-size: 24px;
       text-align: justify; } }
   @media (max-width: 768px) {
     p {
-      font-size: 14px;
+      font-size: 20px;
       text-align: justify; } }
   @media (max-width: 576px) {
     p {
-      font-size: 10px;
+      font-size: 16px;
       text-align: justify; } }
 
 .link-andrevisuales {
