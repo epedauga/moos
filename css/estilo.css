@@ -226,6 +226,7 @@ h5 {
 
 p {
   padding: 0.6rem;
+  padding-bottom: 0.2rem;
   color: #232121; }
   @media (max-width: 1024px) {
     p {
