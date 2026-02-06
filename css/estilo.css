@@ -307,10 +307,7 @@ p {
 }
 
 
-/* =======================
-   MENU KISSÉ RESPONSIVE
-   ======================= */
-
+/* MENU IMAGE */
 .menu-img-wrapper {
   width: 100%;
   display: flex;
@@ -319,13 +316,14 @@ p {
 
 .menu-img {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px; /* límite en desktop */
   height: auto;
-  border-radius: 12px;
+  border-radius: 12px; /* opcional, queda lindo */
 }
 
+/* Ajustes mobile */
 @media (max-width: 768px) {
-  .menu-section img.menu-img {
+  .menu-img {
     max-width: 100%;
   }
 }
