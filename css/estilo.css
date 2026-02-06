@@ -308,10 +308,19 @@ p {
 
 
 
-/* MENU IMAGE */
+/* =======================
+   MENU KISSÉ — RESET TOTAL
+   ======================= */
+
+.menu-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* centra SIEMPRE */
+}
+
 .menu-img-wrapper {
   width: 100%;
-  max-width: 900px;       /* 👈 más chica en desktop */
+  max-width: 700px;          /* 👈 ACHICAMOS FUERTE */
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
@@ -321,6 +330,13 @@ p {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .menu-img-wrapper {
+    max-width: 650px;
+  }
 }
 
 /* Mobile */
