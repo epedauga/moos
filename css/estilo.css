@@ -364,7 +364,7 @@ p {
   font-size: 22px;
   padding: 14px 28px;
   background: #fbf4e8;
-  color: #8b3a62;
+  color: #3566ab; /* el azul */
   text-decoration: none;
   border-radius: 30px;
   box-shadow: 0px 4px 10px rgba(0,0,0,.2);
@@ -372,7 +372,7 @@ p {
 }
 
 .btn-volver:hover {
-  background: #c35b8e;
+  background: ##c9b6d6; /* el clarito kissé */
   color: #fbf4e8;
   transform: translateY(-2px);
 }
