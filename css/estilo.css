@@ -345,3 +345,34 @@ p {
     max-width: 100%;
   }
 }
+
+
+/* =======================
+  BOTÓN VOLVER 
+   ======================= */
+.volver-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* 👈 centrado */
+  margin: 30px 0;
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  padding: 14px 28px;
+  background: #fbf4e8;
+  color: #8b3a62;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,.2);
+  transition: all .3s ease;
+}
+
+.btn-volver:hover {
+  background: #c35b8e;
+  color: #fbf4e8;
+  transform: translateY(-2px);
+}
