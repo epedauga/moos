@@ -318,8 +318,8 @@ p {
 }
 
 .menu-section img.menu-img {
-  width: auto !important;   /* rompe el width:100% */
-  max-width: 1000px;        /* tamaño desktop */
+  width: 100%;
+  max-width: 1000px;   /* 👈 tamaño ideal web */
   height: auto;
 }
 
