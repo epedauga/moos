@@ -1,3 +1,57 @@
+/* Linktree vibez */
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #fff6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.linktree-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  color: #5a2a27;
+}
+
+.subtitle {
+  color: #8a5c5a;
+  margin-bottom: 30px;
+}
+
+.link-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 15px;
+  background-color: #f3b7c0;
+  color: #5a2a27;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.link-button:hover {
+  background-color: #e89aa6;
+  transform: translateY(-2px);
+}
+
+
+
 /* CONTAINER 1 */
 .text-index {
   padding: 60px 120px 60px 120px; }
