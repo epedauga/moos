@@ -48,6 +48,19 @@
       .banner-index2__title {
         font-size: 28px; } }
 
+/* CONTAINER 3 */
+.linktree {
+  padding: 60px 120px 60px 120px; }
+  @media (max-width: 1024px) {
+    .text-index {
+      padding: 40px 80px 40px 80px; } }
+  @media (max-width: 768px) {
+    .text-index {
+      padding: 30px 60px 30px 60px; } }
+  @media (max-width: 576px) {
+    .text-index {
+      padding: 15px 30px 15px 30px; } }
+
 /* GALLERY */
 .pics-portfolio {
   display: flex;
