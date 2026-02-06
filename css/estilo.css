@@ -372,7 +372,7 @@ p {
 }
 
 .btn-volver:hover {
-  background: ##c9b6d6; /* el clarito kissé */
+  background: #c9b6d6; /* el clarito kissé */
   color: #fbf4e8;
   transform: translateY(-2px);
 }
