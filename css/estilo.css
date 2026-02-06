@@ -308,18 +308,20 @@ p {
 
 
 /* =======================
-   MENU KISSÉ FIX DEFINITIVO
+   MENU KISSÉ – FIX FINAL
    ======================= */
 
 .menu-section {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* centra horizontal */
 }
 
 .menu-section img.menu-img {
+  display: block;
+  margin: 0 auto;            /* doble seguro de centrado */
   width: 100%;
-  max-width: 1000px;   /* 👈 tamaño ideal web */
+  max-width: 1200px;         /* ⬅️ subimos tamaño */
   height: auto;
 }
 
