@@ -359,7 +359,7 @@ p {
 
 .volver-wrapper a.btn-volver {
   background-color: #3566ab;   /* 👈 color nuevo */
-  color: #ffffff;
+  color: #fbf4e8;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -373,10 +373,10 @@ p {
 
 .volver-wrapper a.btn-volver:hover {
   background-color: #8b3a62;   /* 👈 hover */
-  color: #ffffff;
+  color: #fbf4e8;
   transform: translateY(-2px);
 }
 
 .volver-wrapper a.btn-volver:visited {
-  color: #ffffff;
+  color: #fbf4e8;
 }
