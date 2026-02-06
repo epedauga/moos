@@ -307,3 +307,26 @@ p {
 }
 
 
+/* =======================
+   MENU KISSÉ RESPONSIVE
+   ======================= */
+
+.menu-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .menu-img {
+    max-width: 100%;
+  }
+}
+
