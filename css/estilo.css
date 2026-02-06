@@ -289,7 +289,10 @@ p {
 }
 
 .links-kisse__btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 16px;
   background-color: #fbf4e8;
   color: #8b3a62;
@@ -305,6 +308,13 @@ p {
   background-color: #c35b8e;
   color: #fbf4e8;
 }
+
+.links-kisse__btn i {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+
 
 
 
