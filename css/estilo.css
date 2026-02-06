@@ -309,7 +309,7 @@ p {
 
 
 /* =======================
-   MENU KISSÉ — RESET TOTAL
+   MENU KISSÉ — CATALOGO
    ======================= */
 
 .menu-center {
@@ -320,7 +320,7 @@ p {
 
 .menu-img-wrapper {
   width: 100%;
-  max-width: 700px;          /* 👈 ACHICAMOS FUERTE */
+  max-width: 700px;          /* ACHICAMOS FUERTE */
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
