@@ -358,7 +358,7 @@ p {
 }
 
 .volver-wrapper a.btn-volver {
-  background-color: #3566ab;   /* 👈 color nuevo */
+  background-color: #c35b8e;   /* 👈 color nuevo */
   color: #fbf4e8;
   text-decoration: none;
   display: inline-flex;
@@ -372,8 +372,8 @@ p {
 }
 
 .volver-wrapper a.btn-volver:hover {
-  background-color: #8b3a62;   /* 👈 hover */
-  color: #fbf4e8;
+  background-color: #fbf4e8;   /* 👈 hover */
+  color: #c35b8e;
   transform: translateY(-2px);
 }
 
