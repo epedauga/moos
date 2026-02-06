@@ -321,8 +321,9 @@ p {
   display: block;
   margin: 0 auto;            /* doble seguro de centrado */
   width: 100%;
-  max-width: 1200px;         /* ⬅️ subimos tamaño */
+  max-width: 700px;         /* ⬅️ subimos tamaño */
   height: auto;
+  border-radius: 12px;
 }
 
 @media (max-width: 768px) {
