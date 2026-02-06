@@ -307,23 +307,28 @@ p {
 }
 
 
+
 /* MENU IMAGE */
 .menu-img-wrapper {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+
+  border-radius: 12px;
+  overflow: hidden;      /* 👈 CLAVE */
 }
 
 .menu-img {
   width: 100%;
-  max-width: 1200px; /* límite en desktop */
   height: auto;
-  border-radius: 12px; /* opcional, queda lindo */
+  display: block;
 }
 
-/* Ajustes mobile */
+/* Mobile */
 @media (max-width: 768px) {
-  .menu-img {
+  .menu-img-wrapper {
     max-width: 100%;
   }
 }
