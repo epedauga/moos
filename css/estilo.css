@@ -308,25 +308,23 @@ p {
 
 
 /* =======================
-   MENU KISSÉ RESPONSIVE
+   MENU KISSÉ FIX DEFINITIVO
    ======================= */
 
-.menu-img-wrapper {
+.menu-section {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.menu-img {
-  width: 100%;
-  max-width: 200px;
+.menu-section img.menu-img {
+  width: auto !important;   /* rompe el width:100% */
+  max-width: 1000px;        /* tamaño desktop */
   height: auto;
-  border-radius: 12px;
 }
 
 @media (max-width: 768px) {
-  .menu-img {
+  .menu-section img.menu-img {
     max-width: 100%;
   }
 }
-
