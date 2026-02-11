@@ -410,8 +410,8 @@ a.btn-kisse {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #c35b8e !important;
-    color: #fbf4e8 !important;
+    background: #8b3a62; /* fondo inicial oscuro */
+    color: #fbf4e8;      /* texto claro */
     padding: 14px 28px;
     font-size: 1rem;
     font-weight: 600;
@@ -422,7 +422,7 @@ a.btn-kisse {
 
 a.btn-kisse:hover,
 a.btn-kisse:active {
-    background: #fbf4e8 !important;
-    color: #8b3a62 !important;  
+    background: #fbf4e8; /* fondo claro al pasar el mouse */
+    color: #8b3a62;      /* texto oscuro */
     border: 2px solid #000;
 }
