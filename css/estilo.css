@@ -382,13 +382,13 @@ p {
 
 /* Caja de texto */
 .text-box {
-    background-color: #f8f5f0; /* color cálido y elegante */
+    background-color: #fcf5e5; /* color cálido y elegante */
     padding: 40px 30px;
     border-radius: 12px;
     display: inline-block;
     max-width: 700px;
     text-align: center;
-    box-shadow: 0 13px 25px rgba(0,0,0,0.08); /* sombra sutil */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* sombra sutil */
 }
 
 /* Tipografía */
