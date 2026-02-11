@@ -406,22 +406,27 @@ p {
 }
 
 /* Botón clásico con estilo */
-.btn-kisse {
+a.btn-kisse {
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* espacio entre ícono y texto */
-    background: #fbf4e8; /* fondo claro y cálido */
-    color: #8b3a62; /* texto rosa vino elegante */
+    gap: 8px;
+    background: #8b3a62; /* fondo oscuro inicial */
+    color: #fbf4e8;      /* texto claro */
     padding: 14px 28px;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
+    border: 2px solid transparent; /* evita que el botón se mueva al hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* leve shadow */
 }
 
-.btn-kisse:hover {
-    background: #c35b8e; /* hover vibrante y moderno */
-    color: #fbf4e8;       /* texto claro sobre fondo vibrante */
-    border: 2px solid #000; /* mantiene contraste elegante */
+/* Hover y active */
+a.btn-kisse:hover,
+a.btn-kisse:active {
+    background: #c35b8e; /* fondo más vibrante */
+    color: #fbf4e8;      
+    border: 2px solid #8b3a62;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2); /* shadow un poco más intenso al hover */
 }
