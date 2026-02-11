@@ -410,8 +410,8 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 8px; /* espacio entre ícono y texto */
-    background: #fbf4e8;
-    color: #8b3a62;
+    background: #fbf4e8; /* fondo claro y cálido */
+    color: #8b3a62; /* texto rosa vino elegante */
     padding: 14px 28px;
     font-size: 1rem;
     font-weight: 600;
@@ -421,7 +421,7 @@ p {
 }
 
 .btn-kisse:hover {
-    background: #c35b8e;
-    color: #fbf4e8;
-    border: 2px solid #000;
+    background: #c35b8e; /* hover vibrante y moderno */
+    color: #fbf4e8;       /* texto claro sobre fondo vibrante */
+    border: 2px solid #000; /* mantiene contraste elegante */
 }
