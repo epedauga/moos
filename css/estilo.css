@@ -419,7 +419,6 @@ a.btn-kisse {
     text-decoration: none;
     transition: all 0.3s ease;
     border: 2px solid transparent; /* para no mover el botón al hover */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 a.btn-kisse:hover,
@@ -427,4 +426,5 @@ a.btn-kisse:active {
     background: #c35b8e; /* fondo más vibrante, no blanco */
     color: #fbf4e8;      /* texto sigue claro */
     border: 2px solid #8b3a62; /* borde sutil para premium */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
