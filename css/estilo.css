@@ -410,7 +410,7 @@ a.btn-kisse {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #8b3a62; /* fondo principal oscuro */
+    background: #8b3a62; /* fondo inicial oscuro */
     color: #fbf4e8;      /* texto claro */
     padding: 14px 28px;
     font-size: 1rem;
@@ -418,13 +418,12 @@ a.btn-kisse {
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid transparent; /* para no mover el botón al hover */
 }
 
 a.btn-kisse:hover,
 a.btn-kisse:active {
-    background: #c35b8e; /* fondo más vibrante, no blanco */
-    color: #fbf4e8;      /* texto sigue claro */
-    border: 2px solid #8b3a62; /* borde sutil para premium */
+    background: #fbf4e8; /* fondo claro al pasar el mouse */
+    color: #8b3a62;      /* texto oscuro */
+    border: 2px solid #000;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
