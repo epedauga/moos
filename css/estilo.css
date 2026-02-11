@@ -406,12 +406,12 @@ p {
 }
 
 /* Botón clásico con estilo */
-a.btn-kisse {
+.btn-kisse {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #fcf5e5; /* fondo inicial oscuro */
-    color: #8b3a62;      /* texto claro */
+    gap: 8px; /* espacio entre ícono y texto */
+    background: #fbf4e8; /* fondo claro y cálido */
+    color: #8b3a62; /* texto rosa vino elegante */
     padding: 14px 28px;
     font-size: 1rem;
     font-weight: 600;
@@ -420,10 +420,8 @@ a.btn-kisse {
     transition: all 0.3s ease;
 }
 
-a.btn-kisse:hover,
-a.btn-kisse:active {
-    background: #8b3a62; /* fondo claro al pasar el mouse */
-    color: #fcf5e5;      /* texto oscuro */
-    border: 2px solid #000;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.btn-kisse:hover {
+    background: #c35b8e; /* hover vibrante y moderno */
+    color: #fbf4e8;       /* texto claro sobre fondo vibrante */
+    border: 2px solid #000; /* mantiene contraste elegante */
 }
