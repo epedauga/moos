@@ -2,7 +2,7 @@
 
 .hero {
   height: 100vh;
-  background: url("banner_index.png") center/cover no-repeat;
+  background: url("media/banner_index.png") center/cover no-repeat;
   position: relative;
 }
 
