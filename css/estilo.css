@@ -410,8 +410,8 @@ a.btn-kisse {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #8b3a62 !important; /* forzar fondo oscuro */
-    color: #fbf4e8 !important;           /* forzar texto claro */
+    background-color: #eed1d6 !important; /* forzar fondo oscuro */
+    color: #8b3b62 !important;           /* forzar texto claro */
     padding: 14px 28px;
     font-size: 1rem;
     font-weight: 600;
@@ -425,8 +425,7 @@ a.btn-kisse {
 /* Hover y active */
 a.btn-kisse:hover,
 a.btn-kisse:active {
-    background-color: #c35b8e !important; /* forzar fondo vibrante */
+    background-color: #8b3b62 !important; /* forzar fondo vibrante */
     color: #fbf4e8 !important;
     border: 2px solid #8b3a62;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
