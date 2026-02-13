@@ -2,21 +2,17 @@
 
 .hero {
   height: 100vh;
-  background: url("media/banner_index.png") center/cover no-repeat;
-  position: relative;
-}
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(236, 181, 191, 0.9) 80%
+    ),
+    url("media/banner_index.png");
 
-.overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(236, 181, 191, 0.9) 80%
-  );
-}
-
-.overlay h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
