@@ -118,8 +118,9 @@
     text-align: center;
     min-width: 100px;
     display: flex;
-    justify-content: space-around;
-    align-items: center; }
+    justify-content: center;
+    align-items: center;
+    gap: 15px; }
     @media (max-width: 576px) {
       .box__redes {
         min-width: 100px; } }
