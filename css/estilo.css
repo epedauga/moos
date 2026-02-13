@@ -134,7 +134,7 @@
       border-radius: 50%;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       transition: all .4s ease-in-out;
-      margin: 0 8px;  }
+      margin: 0 6px;  }
       @media (max-width: 576px) {
         .box__redes a {
           width: 32px;
