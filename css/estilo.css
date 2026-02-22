@@ -471,26 +471,27 @@ a.btn-kisse:active {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 60%,
-    rgba(0,0,0,0.25) 100%
+    rgba(0,0,0,0.9) 0%,
+    rgba(0,0,0,0.6) 60%,
+    rgba(0,0,0,0.2) 100%
   );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;  
   align-items: center;
   text-align: center;
-  gap: 18px;
+  gap: 14px;
   padding: 30px;
   color: white;
 }
 
 .playlist-overlay h3 {
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 500;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+  color: #fbf4e8;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.95);
 }
 
 /* BOTÓN KISSÉ STYLE */
