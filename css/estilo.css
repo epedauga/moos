@@ -466,25 +466,21 @@ a.btn-kisse:active {
 .playlist-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.15));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding: 25px;
   color: white;
-  opacity: 0;
   transition: 0.4s ease;
 }
 
-.playlist-card:hover .playlist-overlay {
-  opacity: 1;
-}
-
 .playlist-overlay h3 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-size: 20px;
   letter-spacing: 1px;
+  transition: 0.3s ease;
 }
 
 .play-btn {
@@ -497,7 +493,17 @@ a.btn-kisse:active {
   transition: 0.3s ease;
 }
 
-.play-btn:hover {
-  background: #f2d4d8; /* podés cambiar al color de Kissé */
-  transform: translateY(-3px);
+/* Hover effect más pro */
+
+.playlist-card:hover .playlist-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.35));
+}
+
+.playlist-card:hover .play-btn {
+  background: #f2d4d8; /* tu color */
+  transform: translateY(-4px);
+}
+
+.playlist-card:hover img {
+  transform: scale(1.08);
 }
