@@ -433,11 +433,11 @@ a.btn-kisse:active {
 
 
 
-/* === PLAYLIST PRO CARDS — FINAL VERSION === */
+/* === PLAYLIST PRO CARDS — FINAL CLEAN VERSION === */
 
 .pics-portfolio {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -446,11 +446,10 @@ a.btn-kisse:active {
 
 .playlist-card {
   position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 24px;
+  width: 320px;
+  height: 320px;
+  border-radius: 28px;
   overflow: hidden;
-  cursor: pointer;
   transition: 0.4s ease;
 }
 
@@ -462,7 +461,7 @@ a.btn-kisse:active {
 }
 
 .playlist-card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 /* OVERLAY */
@@ -472,48 +471,51 @@ a.btn-kisse:active {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.70),
-    rgba(0,0,0,0.20)
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.25)
   );
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 25px;
+  text-align: center;
+  gap: 18px;
+  padding: 30px;
   color: white;
   transition: 0.4s ease;
 }
 
 .playlist-overlay h3 {
-  margin-bottom: 15px;
-  font-size: 20px;
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.95;
 }
 
-/* BOTÓN REFINADO */
+/* BOTÓN KISSÉ STYLE */
 
 .play-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  padding: 10px 22px;
+  gap: 10px;
+  font-size: 15px;
+  padding: 10px 24px;
   background: #fbf4e8;
   color: #8b3a62;
   text-decoration: none;
-  border-radius: 30px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,.15);
+  border-radius: 40px;
+  box-shadow: 0px 6px 16px rgba(0,0,0,.18);
   transition: all .3s ease;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-/* Ícono circular */
+/* Ícono circular automático */
 
 .play-btn::before {
   content: "▶";
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 22px;
@@ -521,17 +523,17 @@ a.btn-kisse:active {
   background: #8b3a62;
   color: #fbf4e8;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 11px;
   transition: all .3s ease;
 }
 
-/* HOVER GENERAL */
+/* HOVER SUAVE */
 
 .playlist-card:hover .playlist-overlay {
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.85),
-    rgba(0,0,0,0.35)
+    rgba(0,0,0,0.40)
   );
 }
 
