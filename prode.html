@@ -6,75 +6,96 @@
 
 <title>PRODE Kissé</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #E7C7CD, #F3E6E8);
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #F3E6E8, #E7C7CD);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.container {
-  text-align: center;
+/* CONTENEDOR */
+.wrapper {
+  width: 90%;
   max-width: 420px;
-  padding: 20px;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
+/* CARD CENTRAL */
+.card {
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 28px 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* TITULOS */
+.logo {
+  font-size: 36px;
   color: #3D5A98;
   margin-bottom: 5px;
+  letter-spacing: 2px;
 }
 
-.subtitle {
-  font-size: 18px;
+.title {
+  font-size: 20px;
+  color: #3D5A98;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 14px;
   color: #8C5A6B;
   margin-bottom: 25px;
 }
 
+/* CTA PRINCIPAL */
 .cta {
+  display: block;
   background: #3D5A98;
   color: white;
   padding: 18px;
-  border-radius: 24px;
+  border-radius: 999px;
   text-decoration: none;
-  display: block;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(61,90,152,0.35);
+  transition: 0.25s;
 }
 
 .cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  transform: translateY(-2px) scale(1.01);
 }
 
-.card {
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: blur(10px);
-  padding: 16px;
-  border-radius: 20px;
-  margin: 10px 0;
-  color: #8C5A6B;
+/* LINKS SECUNDARIOS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.6);
   text-decoration: none;
-  display: block;
+  color: #8C5A6B;
+  font-size: 14px;
   transition: 0.2s;
 }
 
-.card:hover {
-  transform: translateY(-2px);
+.link:hover {
+  background: rgba(255,255,255,0.9);
 }
 
+/* FOOTER */
 .footer {
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 18px;
+  font-size: 12px;
   color: #8C5A6B;
 }
 </style>
@@ -82,23 +103,30 @@ h1 {
 
 <body>
 
-<div class="container">
+<div class="wrapper">
+  <div class="card">
 
-  <h1>KISSÉ</h1>
-  <div class="subtitle">PRODE MUNDIALISTA ⚽🍰</div>
+    <div class="logo">KISSÉ</div>
+    <div class="title">PRODE MUNDIALISTA ⚽🍰</div>
+    <div class="desc">
+      Jugá, acertá y ganá un box Kissé.
+    </div>
 
-  <a href="LINK_A_TU_FORM" class="cta">
-    Jugar ahora
-  </a>
+    <a href="LINK_A_TU_FORM" class="cta">
+      JUGAR AHORA
+    </a>
 
-  <a href="#" class="card">¿Cómo funciona?</a>
-  <a href="#" class="card">Ver ranking</a>
-  <a href="#" class="card">Premio</a>
+    <div class="links">
+      <a href="#" class="link">¿Cómo funciona?</a>
+      <a href="#" class="link">Ver ranking</a>
+      <a href="#" class="link">Premio</a>
+    </div>
 
-  <div class="footer">
-    Jugá gratis y participá por un box Kissé ✨
+    <div class="footer">
+      Cupos limitados · Cierra pronto
+    </div>
+
   </div>
-
 </div>
 
 </body>
