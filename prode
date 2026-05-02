@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kissé Prode</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, #eed1d6 0%, #f6e4e8 100%);
+  display:flex;
+  justify-content:center;
+  min-height:100vh;
+}
+
+/* CONTAINER */
+.app {
+  width:100%;
+  max-width:420px;
+  padding:30px 20px 40px;
+}
+
+/* HEADER */
+.header {
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.header h1 {
+  font-family:'Bebas Neue';
+  font-size:70px;
+  color:#fbf4e8;
+  text-shadow:0 4px 15px rgba(0,0,0,0.6);
+}
+
+.header h2 {
+  font-family:'Bebas Neue';
+  font-size:28px;
+  color:#3566ab;
+  margin-top:-5px;
+}
+
+/* CARD HERO */
+.hero-card {
+  background: rgba(251,244,232,0.65);
+  backdrop-filter: blur(10px);
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.hero-card p {
+  font-size:15px;
+  color:#232121;
+  margin-bottom:20px;
+}
+
+/* CTA */
+.cta {
+  display:block;
+  padding:16px;
+  border-radius:30px;
+  background:#3566ab;
+  color:#fbf4e8;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(53,102,171,0.4);
+  transition:.25s;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow:0 14px 30px rgba(53,102,171,0.5);
+}
+
+/* COUNTDOWN */
+.countdown {
+  margin-top:10px;
+  font-size:13px;
+  color:#8b3a62;
+}
+
+/* MODULES GRID */
+.modules {
+  display:grid;
+  gap:12px;
+}
+
+.module {
+  background:#fbf4e8;
+  padding:16px;
+  border-radius:16px;
+  text-decoration:none;
+  color:#8b3a62;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 6px 14px rgba(0,0,0,.12);
+  transition:.2s;
+}
+
+.module:hover {
+  transform:translateY(-2px);
+  background:#c35b8e;
+  color:#fbf4e8;
+}
+
+/* ICON */
+.module span {
+  opacity:.6;
+}
+
+/* FOOTER */
+.footer {
+  margin-top:25px;
+  text-align:center;
+  font-size:12px;
+  color:#8b3a62;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .header h1 { font-size:50px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <h1>KISSÉ</h1>
+    <h2>PRODE ⚽🍰</h2>
+  </div>
+
+  <div class="hero-card">
+    <p>
+      Jugá, acertá y ganá un box Kissé.  
+      Seguí tu ranking en vivo.
+    </p>
+
+    <a href="LINK_A_TU_FORM" class="cta">
+      JUGAR AHORA
+    </a>
+
+    <div class="countdown" id="countdown"></div>
+  </div>
+
+  <div class="modules">
+    <a href="#como" class="module">
+      ¿Cómo funciona? <span>→</span>
+    </a>
+
+    <a href="LINK_RANKING" class="module">
+      Ver ranking <span>→</span>
+    </a>
+
+    <a href="#premio" class="module">
+      Premio <span>→</span>
+    </a>
+  </div>
+
+  <div class="footer">
+    Cupos limitados · Gratis
+  </div>
+
+</div>
+
+<script>
+
+/* COUNTDOWN */
+const deadline = new Date("2026-06-10T23:59:59").getTime();
+const el = document.getElementById("countdown");
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  const d = deadline - now;
+
+  const days = Math.floor(d/(1000*60*60*24));
+  const hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+
+  el.innerHTML = `Cierra en ${days} días · ${hours} hs`;
+},1000);
+
+</script>
+
+</body>
+</html>
