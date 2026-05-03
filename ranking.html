@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kissé Ranking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#0f0f12;
+  color:#fbf4e8;
+  display:flex;
+  justify-content:center;
+}
+
+.app{
+  width:100%;
+  max-width:500px;
+  padding:30px 20px;
+}
+
+/* TITLE */
+h1{
+  font-family:'Bebas Neue';
+  font-size:60px;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:30px;
+}
+
+th, td{
+  padding:12px;
+  text-align:left;
+}
+
+th{
+  font-size:12px;
+  opacity:.6;
+}
+
+tr{
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+tr:first-child{
+  color:#c35b8e;
+  font-weight:600;
+}
+
+/* WEEK CARDS */
+.week-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:12px;
+}
+
+.week-card h3{
+  font-family:'Bebas Neue';
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.week-card p{
+  font-size:16px;
+}
+
+.week-card span{
+  font-size:12px;
+  opacity:.6;
+}
+
+/* LOADING */
+.loading{
+  text-align:center;
+  opacity:.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <h1>RANKING</h1>
+
+  <div class="loading" id="loading">Cargando...</div>
+
+  <table id="ranking" style="display:none;">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Jugador</th>
+        <th>Puntos</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h1 style="font-size:40px;">SEMANA</h1>
+  <div id="weekly"></div>
+
+</div>
+
+<script>
+
+// 🔗 PEGÁ ACÁ TU CSV
+const URL = "PEGÁ_ACÁ_TU_LINK_CSV";
+
+
+async function loadData(){
+  const res = await fetch(URL);
+  const text = await res.text();
+
+  const rows = text.trim().split("\n").slice(1);
+
+  const data = rows.map(r=>{
+    const [name, week, points] = r.split(",");
+    return {
+      name: name.trim(),
+      week: week.trim(),
+      points: Number(points)
+    };
+  });
+
+  renderRanking(data);
+  renderWeekly(data);
+
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("ranking").style.display = "table";
+}
+
+
+// 🏆 RANKING GENERAL
+function renderRanking(data){
+  const total = {};
+
+  data.forEach(p=>{
+    total[p.name] = (total[p.name] || 0) + p.points;
+  });
+
+  const sorted = Object.entries(total)
+    .sort((a,b)=>b[1]-a[1]);
+
+  const tbody = document.querySelector("#ranking tbody");
+
+  sorted.forEach((p,i)=>{
+    tbody.innerHTML += `
+      <tr>
+        <td>${i+1}</td>
+        <td>${p[0]}</td>
+        <td>${p[1]}</td>
+      </tr>
+    `;
+  });
+}
+
+
+// ⭐ MEJOR POR SEMANA
+function renderWeekly(data){
+  const weeks = {};
+
+  data.forEach(p=>{
+    if(!weeks[p.week]) weeks[p.week] = {};
+    weeks[p.week][p.name] = (weeks[p.week][p.name] || 0) + p.points;
+  });
+
+  const container = document.getElementById("weekly");
+
+  Object.keys(weeks).forEach(week=>{
+    const sorted = Object.entries(weeks[week])
+      .sort((a,b)=>b[1]-a[1]);
+
+    const winner = sorted[0];
+
+    container.innerHTML += `
+      <div class="week-card">
+        <h3>${week}</h3>
+        <p>${winner[0]}</p>
+        <span>${winner[1]} puntos</span>
+      </div>
+    `;
+  });
+}
+
+
+loadData();
+
+</script>
+
+</body>
+</html>
