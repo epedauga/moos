@@ -1,30 +1,275 @@
-<div class="modules">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="module toggle">
-    ¿Cómo funciona?
-    <span>+</span>
+<title>Kissé Prode</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#0f0f12;
+  color:#fbf4e8;
+  display:flex;
+  justify-content:center;
+  min-height:100vh;
+}
+
+/* GLOW */
+body::before{
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:#c35b8e;
+  filter:blur(120px);
+  opacity:.25;
+  top:-100px;
+  right:-100px;
+}
+
+/* CONTAINER */
+.app{
+  width:100%;
+  max-width:420px;
+  padding:30px 20px;
+}
+
+/* LOGO */
+.logo{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.logo h1{
+  font-family:'Bebas Neue';
+  font-size:70px;
+  letter-spacing:2px;
+}
+
+/* HERO */
+.hero{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border-radius:24px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.hero h2{
+  font-family:'Bebas Neue';
+  font-size:28px;
+  margin-bottom:10px;
+  color:#c35b8e;
+}
+
+.hero p{
+  font-size:14px;
+  opacity:.8;
+  margin-bottom:20px;
+}
+
+/* CTA */
+.cta{
+  display:block;
+  padding:16px;
+  border-radius:40px;
+  background:#c35b8e;
+  color:#fbf4e8;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 30px rgba(195,91,142,0.5);
+  transition:.25s;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 40px rgba(195,91,142,0.7);
+}
+
+/* COUNTDOWN */
+.countdown{
+  margin-top:12px;
+  font-size:12px;
+  opacity:.6;
+}
+
+/* MODULES */
+.modules{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.module{
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  text-decoration:none;
+  color:#fbf4e8;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.2s;
+}
+
+.module:hover{
+  background:rgba(195,91,142,0.15);
+  border-color:#c35b8e;
+}
+
+/* TOGGLE */
+.toggle{
+  cursor:pointer;
+}
+
+/* DROPDOWN */
+.dropdown{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.35s ease;
+  padding:0 18px;
+}
+
+.dropdown p{
+  margin:10px 0 15px;
+  font-size:13px;
+  opacity:.75;
+}
+
+/* OPEN */
+.dropdown.open{
+  max-height:200px;
+}
+
+/* ICON */
+.icon{
+  transition:transform 0.3s ease;
+}
+
+.toggle.active .icon{
+  transform:rotate(45deg);
+}
+
+/* FOOTER */
+.footer{
+  margin-top:25px;
+  text-align:center;
+  font-size:11px;
+  opacity:.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="logo">
+    <h1>KISSÉ</h1>
   </div>
-  <div class="dropdown">
+
+  <div class="hero">
+    <h2>PRODE MUNDIALISTA ⚽🍰</h2>
+
     <p>
-      Elegís los resultados de los partidos (1, X o 2).  
-      Sumás puntos por cada acierto y competís con otros.  
-      El que más puntos tenga gana 🏆
+      Jugá. Acertá. Ganá.  
+      Ranking en vivo + premio Kissé.
     </p>
+
+    <a href="LINK_A_TU_FORM" class="cta">
+      JUGAR AHORA
+    </a>
+
+    <div class="countdown" id="countdown"></div>
   </div>
 
-  <a href="LINK_RANKING" class="module">
-    Ver ranking <span>→</span>
-  </a>
+  <div class="modules">
 
-  <div class="module toggle">
-    Premio
-    <span>+</span>
+    <div class="module toggle">
+      ¿Cómo funciona?
+      <span class="icon">+</span>
+    </div>
+    <div class="dropdown">
+      <p>
+        Elegís los resultados de los partidos (1, X o 2).  
+        Sumás puntos por cada acierto y competís con otros.  
+        El que más puntos tenga gana 🏆
+      </p>
+    </div>
+
+    <a href="LINK_RANKING" class="module">
+      Ver ranking <span>→</span>
+    </a>
+
+    <div class="module toggle">
+      Premio
+      <span class="icon">+</span>
+    </div>
+    <div class="dropdown">
+      <p>
+        Un box Kissé especial con selección de mini cakes 🍰  
+        Exclusivo para el ganador del prode.
+      </p>
+    </div>
+
   </div>
-  <div class="dropdown">
-    <p>
-      Un box Kissé especial con selección de mini cakes 🍰  
-      Exclusivo para el ganador del prode.
-    </p>
+
+  <div class="footer">
+    PRODE Kissé · Edición limitada
   </div>
 
 </div>
+
+<script>
+
+/* COUNTDOWN */
+const deadline = new Date("2026-06-10T23:59:59").getTime();
+const el = document.getElementById("countdown");
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  const d = deadline - now;
+
+  const days = Math.floor(d/(1000*60*60*24));
+  const hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+
+  el.innerHTML = `Cierra en ${days} días · ${hours} hs`;
+},1000);
+
+
+/* TOGGLE DROPDOWN */
+const toggles = document.querySelectorAll(".toggle");
+
+toggles.forEach(toggle => {
+  toggle.addEventListener("click", () => {
+
+    const isActive = toggle.classList.contains("active");
+
+    document.querySelectorAll(".toggle").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
+
+    if (!isActive) {
+      toggle.classList.add("active");
+      toggle.nextElementSibling.classList.add("open");
+    }
+
+  });
+});
+
+</script>
+
+</body>
+</html>
