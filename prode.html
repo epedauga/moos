@@ -30,7 +30,7 @@ body::before{
   height:300px;
   background:#c35b8e;
   filter:blur(120px);
-  opacity:.25;
+  opacity:.2;
   top:-100px;
   right:-100px;
 }
@@ -78,7 +78,7 @@ body::before{
   margin-bottom:20px;
 }
 
-/* CTA */
+/* CTA (AJUSTADO) */
 .cta{
   display:block;
   padding:16px;
@@ -87,13 +87,13 @@ body::before{
   color:#fbf4e8;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 10px 30px rgba(195,91,142,0.5);
+  box-shadow:0 6px 16px rgba(195,91,142,0.35); /* ↓ más suave */
   transition:.25s;
 }
 
 .cta:hover{
-  transform:translateY(-2px);
-  box-shadow:0 14px 40px rgba(195,91,142,0.7);
+  transform:translateY(-1px);
+  box-shadow:0 10px 22px rgba(195,91,142,0.45); /* ↓ más elegante */
 }
 
 /* COUNTDOWN */
@@ -148,7 +148,6 @@ body::before{
   opacity:.75;
 }
 
-/* OPEN */
 .dropdown.open{
   max-height:200px;
 }
@@ -250,7 +249,7 @@ setInterval(()=>{
 },1000);
 
 
-/* TOGGLE DROPDOWN */
+/* TOGGLE */
 const toggles = document.querySelectorAll(".toggle");
 
 toggles.forEach(toggle => {
