@@ -11,127 +11,130 @@
 <style>
 
 /* RESET */
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(180deg, #eed1d6 0%, #f6e4e8 100%);
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#0f0f12;
+  color:#fbf4e8;
   display:flex;
   justify-content:center;
   min-height:100vh;
 }
 
 /* CONTAINER */
-.app {
+.app{
   width:100%;
   max-width:420px;
-  padding:30px 20px 40px;
+  padding:30px 20px;
 }
 
-/* HEADER */
-.header {
+/* LOGO */
+.logo{
   text-align:center;
-  margin-bottom:25px;
+  margin-bottom:30px;
 }
 
-.header h1 {
+.logo h1{
   font-family:'Bebas Neue';
   font-size:70px;
-  color:#fbf4e8;
-  text-shadow:0 4px 15px rgba(0,0,0,0.6);
+  letter-spacing:2px;
 }
 
-.header h2 {
+/* HERO */
+.hero{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border-radius:24px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.hero h2{
   font-family:'Bebas Neue';
   font-size:28px;
-  color:#3566ab;
-  margin-top:-5px;
+  margin-bottom:10px;
+  color:#c35b8e;
 }
 
-/* CARD HERO */
-.hero-card {
-  background: rgba(251,244,232,0.65);
-  backdrop-filter: blur(10px);
-  border-radius:22px;
-  padding:25px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.hero-card p {
-  font-size:15px;
-  color:#232121;
+.hero p{
+  font-size:14px;
+  opacity:.8;
   margin-bottom:20px;
 }
 
 /* CTA */
-.cta {
+.cta{
   display:block;
   padding:16px;
-  border-radius:30px;
-  background:#3566ab;
+  border-radius:40px;
+  background:#c35b8e;
   color:#fbf4e8;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 10px 25px rgba(53,102,171,0.4);
+  box-shadow:0 10px 30px rgba(195,91,142,0.5);
   transition:.25s;
 }
 
-.cta:hover {
-  transform: translateY(-2px);
-  box-shadow:0 14px 30px rgba(53,102,171,0.5);
+.cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 40px rgba(195,91,142,0.7);
 }
 
 /* COUNTDOWN */
-.countdown {
-  margin-top:10px;
-  font-size:13px;
-  color:#8b3a62;
-}
-
-/* MODULES GRID */
-.modules {
-  display:grid;
-  gap:12px;
-}
-
-.module {
-  background:#fbf4e8;
-  padding:16px;
-  border-radius:16px;
-  text-decoration:none;
-  color:#8b3a62;
-  font-weight:600;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 6px 14px rgba(0,0,0,.12);
-  transition:.2s;
-}
-
-.module:hover {
-  transform:translateY(-2px);
-  background:#c35b8e;
-  color:#fbf4e8;
-}
-
-/* ICON */
-.module span {
+.countdown{
+  margin-top:12px;
+  font-size:12px;
   opacity:.6;
 }
 
-/* FOOTER */
-.footer {
-  margin-top:25px;
-  text-align:center;
-  font-size:12px;
-  color:#8b3a62;
+/* MODULES */
+.modules{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 
-/* MOBILE */
-@media(max-width:480px){
-  .header h1 { font-size:50px; }
+.module{
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  text-decoration:none;
+  color:#fbf4e8;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.2s;
+}
+
+.module:hover{
+  background:rgba(195,91,142,0.15);
+  border-color:#c35b8e;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:25px;
+  text-align:center;
+  font-size:11px;
+  opacity:.5;
+}
+
+/* GLOW BG */
+body::before{
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:#c35b8e;
+  filter:blur(120px);
+  opacity:.25;
+  top:-100px;
+  right:-100px;
 }
 
 </style>
@@ -141,15 +144,16 @@ body {
 
 <div class="app">
 
-  <div class="header">
+  <div class="logo">
     <h1>KISSÉ</h1>
-    <h2>PRODE ⚽🍰</h2>
   </div>
 
-  <div class="hero-card">
+  <div class="hero">
+    <h2>PRODE MUNDIALISTA ⚽🍰</h2>
+
     <p>
-      Jugá, acertá y ganá un box Kissé.  
-      Seguí tu ranking en vivo.
+      Jugá. Acertá. Ganá.  
+      Ranking en vivo + premio Kissé.
     </p>
 
     <a href="LINK_A_TU_FORM" class="cta">
@@ -160,7 +164,7 @@ body {
   </div>
 
   <div class="modules">
-    <a href="#como" class="module">
+    <a href="#" class="module">
       ¿Cómo funciona? <span>→</span>
     </a>
 
@@ -168,20 +172,19 @@ body {
       Ver ranking <span>→</span>
     </a>
 
-    <a href="#premio" class="module">
+    <a href="#" class="module">
       Premio <span>→</span>
     </a>
   </div>
 
   <div class="footer">
-    Cupos limitados · Gratis
+    PRODE Kissé · Edición limitada
   </div>
 
 </div>
 
 <script>
 
-/* COUNTDOWN */
 const deadline = new Date("2026-06-10T23:59:59").getTime();
 const el = document.getElementById("countdown");
 
