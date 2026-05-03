@@ -30,7 +30,7 @@ body::before{
   height:300px;
   background:#c35b8e;
   filter:blur(120px);
-  opacity:.2;
+  opacity:.15;
   top:-100px;
   right:-100px;
 }
@@ -78,7 +78,7 @@ body::before{
   margin-bottom:20px;
 }
 
-/* CTA CON MICRO GLOW */
+/* CTA MÁS SUTIL */
 .cta{
   display:block;
   padding:16px;
@@ -88,11 +88,12 @@ body::before{
   text-decoration:none;
   font-weight:600;
 
-  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
   transition:all 0.25s ease;
   position:relative;
 }
 
+/* glow MUY suave */
 .cta::after{
   content:"";
   position:absolute;
@@ -100,18 +101,19 @@ body::before{
   border-radius:40px;
   background:#c35b8e;
   opacity:0;
-  filter:blur(14px);
+  filter:blur(8px); /* ↓ menos blur */
   transition:opacity 0.25s ease;
   z-index:-1;
 }
 
+/* hover refinado */
 .cta:hover{
-  transform:translateY(-1px) scale(1.01);
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.28);
 }
 
 .cta:hover::after{
-  opacity:0.6;
+  opacity:0.25; /* ↓ mucho más sutil */
 }
 
 /* COUNTDOWN */
@@ -143,7 +145,7 @@ body::before{
 }
 
 .module:hover{
-  background:rgba(195,91,142,0.15);
+  background:rgba(195,91,142,0.12);
   border-color:#c35b8e;
 }
 
@@ -266,8 +268,7 @@ setInterval(()=>{
   el.innerHTML = `Cierra en ${days} días · ${hours} hs`;
 },1000);
 
-
-/* TOGGLE DROPDOWN */
+/* TOGGLE */
 const toggles = document.querySelectorAll(".toggle");
 
 toggles.forEach(toggle => {
