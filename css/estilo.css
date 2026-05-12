@@ -66,9 +66,10 @@
       -webkit-transform: scale(1.2);
       transform: scale(1.2); }
 
+
 .menu {
   background: none;
-  padding-top: 1rem; /* separa el logo de arriba */
+  padding-top: 1rem;
 }
 
 .menu .container-fluid {
@@ -78,22 +79,33 @@
 }
 
 .menu__logo {
-  width: 9rem; /* más grande */
-  padding: 0rem;
+  width: 9rem;
+  padding: 0;
   display: block;
 }
 
+/* Mobile */
 @media (max-width: 576px) {
   .menu__logo {
-    width: 6.5rem;
+    width: 6rem;
   }
 }
 
+/* Tablet */
 @media (min-width: 577px) and (max-width: 991px) {
   .menu__logo {
     width: 7.5rem;
   }
 }
+
+/* Desktop */
+@media (min-width: 992px) {
+  .menu__logo {
+    width: 9rem;
+  }
+}
+
+
 
 @media (min-width: 992px) {
   .menu__logo {
