@@ -1,85 +1,369 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Pedido Test</title>
 
-  <style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    body {
-      font-family: Arial;
-      padding: 40px;
-      max-width: 500px;
-      margin: auto;
-    }
+<title>Pedidos</title>
 
-    input,
-    select,
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      font-size: 16px;
-    }
+<style>
 
-    button {
-      cursor: pointer;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  </style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    padding:15px;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    border-radius:24px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input,
+select{
+    width:100%;
+    padding:16px;
+    border-radius:14px;
+    border:1px solid #ddd;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:black;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:25px;
+}
+
+button:active{
+    transform:scale(0.98);
+}
+
+.section{
+    margin-top:20px;
+    padding:18px;
+    background:#fafafa;
+    border-radius:18px;
+    border:1px solid #eee;
+}
+
+.hidden{
+    display:none;
+}
+
+.success{
+    margin-top:20px;
+    padding:16px;
+    border-radius:14px;
+    background:#d4edda;
+    color:#155724;
+    text-align:center;
+    font-weight:bold;
+    display:none;
+}
+
+.quick-products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+.quick-btn{
+    background:#f0f0f0;
+    border:none;
+    color:black;
+    padding:14px;
+    border-radius:14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.quick-btn.active{
+    background:black;
+    color:white;
+}
+
+.loading{
+    opacity:0.6;
+    pointer-events:none;
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <h1>Nuevo Pedido</h1>
+<div class="container">
 
-  <input type="text" id="cliente" placeholder="Nombre cliente">
+<h1>🍪 Nuevo Pedido</h1>
 
-  <select id="producto">
-    <option>Bowl Cookies</option>
-    <option>Bowl Brookies</option>
-  </select>
+<label>Cliente</label>
+<input type="text" id="cliente" placeholder="Nombre cliente">
 
-  <input type="number" id="cantidad" placeholder="Cantidad bowls">
+<label>Fecha</label>
+<input type="date" id="fecha">
 
-  <input type="number" id="chips" placeholder="Mini Choco Chips">
+<label>Hora</label>
+<input type="time" id="hora">
 
-  <button onclick="enviarPedido()">
-    Enviar Pedido
-  </button>
+<label>Dirección</label>
+<input type="text" id="direccion" placeholder="Dirección entrega">
 
-  <script>
+<label>Producto</label>
 
-    async function enviarPedido() {
+<div class="quick-products">
 
-      const datos = {
+<button class="quick-btn" onclick="selectProduct('Mini Cookies Bowl')">
+Mini Bowl
+</button>
 
-        cliente:
-          document.getElementById("cliente").value,
+<button class="quick-btn" onclick="selectProduct('Bowl Brookies')">
+Brookies
+</button>
 
-        producto:
-          document.getElementById("producto").value,
+<button class="quick-btn" onclick="selectProduct('Cake')">
+Cake
+</button>
 
-        cantidad:
-          document.getElementById("cantidad").value,
+<button class="quick-btn" onclick="selectProduct('Cookies')">
+Cookies
+</button>
 
-        chips:
-          document.getElementById("chips").value
+</div>
 
-      };
+<select id="producto">
 
-      await fetch("https://script.google.com/macros/s/AKfycbzW55ymf9wbc881RWlg1t33VmcdroTzWrU4xu5SzaUClR-VBu-iWxGGELttsGQah1CB/exec", {
+<option value="">Seleccionar producto</option>
+<option value="Mini Cookies Bowl">Mini Cookies Bowl</option>
+<option value="Bowl Brookies">Bowl Brookies</option>
+<option value="Cake">Cake</option>
+<option value="Cookies">Cookies</option>
 
-        method: "POST",
+</select>
 
-        body: JSON.stringify(datos)
+<!-- MINI COOKIES -->
 
-      });
+<div id="cookiesSection" class="section hidden">
 
-      alert("Pedido enviado");
+<h2>🍪 Mini Cookies Bowl</h2>
+
+<label>Mini Choco Chips</label>
+<input type="number" id="chips" placeholder="Cantidad">
+
+<label>Red Velvet</label>
+<input type="number" id="redvelvet" placeholder="Cantidad">
+
+<label>Oreo</label>
+<input type="number" id="oreo" placeholder="Cantidad">
+
+<label>Nutella</label>
+<input type="number" id="nutella" placeholder="Cantidad">
+
+<label>Lemon</label>
+<input type="number" id="lemon" placeholder="Cantidad">
+
+</div>
+
+<!-- BROOKIES -->
+
+<div id="brookieSection" class="section hidden">
+
+<h2>🍫 Bowl Brookies</h2>
+
+<label>Tipo Brookie</label>
+
+<select id="tipoBrookie">
+
+<option value="">Seleccionar</option>
+<option value="Clasico">Clásico</option>
+<option value="Nutella">Nutella</option>
+<option value="Oreo">Oreo</option>
+<option value="Kinder">Kinder</option>
+<option value="Ferrero">Ferrero</option>
+
+</select>
+
+<label>Cantidad Brookies</label>
+<input type="number" id="cantidadBrookie" placeholder="Cantidad">
+
+</div>
+
+<button id="guardarBtn" onclick="guardarPedido()">
+AGREGAR PEDIDO
+</button>
+
+<div class="success" id="success">
+✅ Pedido agregado correctamente
+</div>
+
+</div>
+
+<script>
+
+const producto = document.getElementById("producto");
+
+const cookiesSection = document.getElementById("cookiesSection");
+const brookieSection = document.getElementById("brookieSection");
+
+const quickButtons = document.querySelectorAll(".quick-btn");
+
+function selectProduct(value){
+
+    producto.value = value;
+
+    quickButtons.forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    quickButtons.forEach(btn=>{
+
+        if(
+            btn.innerText.toLowerCase().includes(
+                value.toLowerCase().split(" ")[0]
+            )
+        ){
+            btn.classList.add("active");
+        }
+
+    });
+
+    updateSections();
+
+}
+
+producto.addEventListener("change", updateSections);
+
+function updateSections(){
+
+    cookiesSection.classList.add("hidden");
+    brookieSection.classList.add("hidden");
+
+    if(producto.value === "Mini Cookies Bowl"){
+        cookiesSection.classList.remove("hidden");
+    }
+
+    if(producto.value === "Bowl Brookies"){
+        brookieSection.classList.remove("hidden");
+    }
+
+}
+
+async function guardarPedido(){
+
+    const guardarBtn = document.getElementById("guardarBtn");
+
+    guardarBtn.classList.add("loading");
+    guardarBtn.innerText = "GUARDANDO...";
+
+    const data = {
+
+        cliente: document.getElementById("cliente").value,
+        fecha: document.getElementById("fecha").value,
+        hora: document.getElementById("hora").value,
+        direccion: document.getElementById("direccion").value,
+        producto: document.getElementById("producto").value,
+
+        chips: document.getElementById("chips").value || 0,
+        redvelvet: document.getElementById("redvelvet").value || 0,
+        oreo: document.getElementById("oreo").value || 0,
+        nutella: document.getElementById("nutella").value || 0,
+        lemon: document.getElementById("lemon").value || 0,
+
+        tipoBrookie: document.getElementById("tipoBrookie").value || "",
+        cantidadBrookie: document.getElementById("cantidadBrookie").value || 0
+
+    };
+
+    /*
+    PEGAR ACA URL APPS SCRIPT
+    */
+
+    const url = "PEGAR_URL_APPS_SCRIPT";
+
+    try{
+
+        const response = await fetch(url,{
+            method:"POST",
+            body:JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        console.log(result);
+
+        document.getElementById("success").style.display = "block";
+
+        limpiarFormulario();
+
+        setTimeout(()=>{
+            document.getElementById("success").style.display = "none";
+        },3000);
+
+    }catch(error){
+
+        console.log(error);
+
+        alert("Error al guardar");
 
     }
 
-  </script>
+    guardarBtn.classList.remove("loading");
+    guardarBtn.innerText = "AGREGAR PEDIDO";
+
+}
+
+function limpiarFormulario(){
+
+    document.querySelectorAll("input").forEach(input=>{
+        input.value = "";
+    });
+
+    document.querySelectorAll("select").forEach(select=>{
+        select.selectedIndex = 0;
+    });
+
+    cookiesSection.classList.add("hidden");
+    brookieSection.classList.add("hidden");
+
+    quickButtons.forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+}
+
+</script>
 
 </body>
 </html>
