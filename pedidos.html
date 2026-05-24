@@ -182,17 +182,14 @@ Cookies
 <label>Mini Choco Chips</label>
 <input type="number" id="chips" placeholder="Cantidad">
 
-<label>Red Velvet</label>
-<input type="number" id="redvelvet" placeholder="Cantidad">
+<label>Mini Red Velvet</label>
+<input type="number" id="redVelvet" placeholder="Cantidad">
 
-<label>Oreo</label>
-<input type="number" id="oreo" placeholder="Cantidad">
+<label>Mini Choco Choco</label>
+<input type="number" id="chocoChoco" placeholder="Cantidad">
 
-<label>Nutella</label>
-<input type="number" id="nutella" placeholder="Cantidad">
-
-<label>Lemon</label>
-<input type="number" id="lemon" placeholder="Cantidad">
+<label>Mini Berry Caramel</label>
+<input type="number" id="berryCaramel" placeholder="Cantidad">
 
 </div>
 
@@ -296,10 +293,9 @@ async function guardarPedido(){
         producto: document.getElementById("producto").value,
 
         chips: document.getElementById("chips").value || 0,
-        redvelvet: document.getElementById("redvelvet").value || 0,
-        oreo: document.getElementById("oreo").value || 0,
-        nutella: document.getElementById("nutella").value || 0,
-        lemon: document.getElementById("lemon").value || 0,
+        redVelvet: document.getElementById("redVelvet").value || 0,
+        chocoChoco: document.getElementById("chocoChoco").value || 0,
+        berryCaramel: document.getElementById("berryCaramel").value || 0,
 
         tipoBrookie: document.getElementById("tipoBrookie").value || "",
         cantidadBrookie: document.getElementById("cantidadBrookie").value || 0
