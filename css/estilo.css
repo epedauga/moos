@@ -1,78 +1,26 @@
 /* =========================================================
-   KISSÉ — MAIN STYLE
+   KISSÉ REFINEMENT
 ========================================================= */
 
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* =========================
-   VARIABLES
-========================= */
-
 :root{
-
-    --pink:#E5C3D2;
-    --pink-light:#F7E8EF;
-
-    --cream:#F6EFCF;
-
-    --brown:#5A1D0F;
-    --brown-dark:#3F1308;
-
-    --white:#FFFFFF;
-
-    --text:#2B120B;
-
+    --kisse-pink:#E5C3D2;
+    --kisse-cream:#F6EFCF;
+    --kisse-brown:#5A1D0F;
 }
 
 /* =========================
-   BODY
+   BODY SOFT BACKGROUND
 ========================= */
 
 body{
 
-    font-family: 'Helvetica Neue', sans-serif;
-
     background:
     linear-gradient(
         180deg,
-        var(--pink-light) 0%,
-        #FFF8FB 60%,
-        var(--cream) 100%
+        #F8EAF0 0%,
+        #FFF9FB 60%,
+        #F6EFCF 100%
     );
-
-    color:var(--text);
-
-    overflow-x:hidden;
-
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-
-    background:transparent !important;
-
-    padding-top:20px;
-
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.menu{
-
-    background:transparent !important;
 
 }
 
@@ -82,13 +30,9 @@ header{
 
 .menu__logo{
 
-    width:180px;
+    width:170px;
 
-    display:block;
-
-    margin:auto;
-
-    transition:0.3s ease;
+    transition:0.25s ease;
 
 }
 
@@ -104,13 +48,9 @@ header{
 
 .links-kisse{
 
-    padding:50px 20px 80px;
+    padding:40px 20px 70px;
 
 }
-
-/* =========================
-   CONTAINER
-========================= */
 
 .links-kisse__container{
 
@@ -134,19 +74,17 @@ header{
 
     background:rgba(255,255,255,0.72);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(10px);
 
-    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.6);
 
-    border:1px solid rgba(255,255,255,0.5);
+    border-radius:24px;
 
-    border-radius:26px;
-
-    padding:20px 24px;
+    padding:18px 22px;
 
     text-decoration:none;
 
-    color:var(--brown);
+    color:var(--kisse-brown);
 
     font-size:17px;
 
@@ -161,38 +99,23 @@ header{
     transition:0.25s ease;
 
     box-shadow:
-        0 10px 30px rgba(90,29,15,0.08);
+        0 8px 24px rgba(90,29,15,0.08);
 
 }
-
-/* =========================
-   ICONS
-========================= */
 
 .links-kisse__btn i{
 
-    font-size:20px;
-
-    width:22px;
-
-    text-align:center;
+    font-size:18px;
 
 }
 
-/* =========================
-   BUTTON HOVER
-========================= */
-
 .links-kisse__btn:hover{
 
-    background:var(--brown);
+    background:var(--kisse-brown);
 
     color:white;
 
     transform:translateY(-3px);
-
-    box-shadow:
-        0 14px 35px rgba(90,29,15,0.18);
 
 }
 
@@ -202,16 +125,16 @@ header{
 
 .box{
 
-    padding:20px 20px 50px;
+    background:transparent;
 
     text-align:center;
 
-    background:transparent;
+    padding-bottom:40px;
 
 }
 
 /* =========================
-   SOCIAL
+   SOCIAL ICONS
 ========================= */
 
 .box__redes{
@@ -222,19 +145,15 @@ header{
 
     gap:18px;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 
 }
 
-/* =========================
-   SOCIAL BUTTONS
-========================= */
-
 .box__redes a{
 
-    width:58px;
+    width:56px;
 
-    height:58px;
+    height:56px;
 
     border-radius:50%;
 
@@ -242,11 +161,9 @@ header{
 
     backdrop-filter:blur(10px);
 
-    -webkit-backdrop-filter:blur(10px);
-
     border:1px solid rgba(255,255,255,0.5);
 
-    color:var(--brown);
+    color:var(--kisse-brown);
 
     display:flex;
 
@@ -256,7 +173,7 @@ header{
 
     text-decoration:none;
 
-    font-size:24px;
+    font-size:22px;
 
     transition:0.25s ease;
 
@@ -265,13 +182,9 @@ header{
 
 }
 
-/* =========================
-   SOCIAL HOVER
-========================= */
-
 .box__redes a:hover{
 
-    background:var(--brown);
+    background:var(--kisse-brown);
 
     color:white;
 
@@ -280,93 +193,15 @@ header{
 }
 
 /* =========================
-   TEXT FOOTER
-========================= */
-
-.box p{
-
-    color:var(--brown);
-
-    font-size:14px;
-
-    opacity:0.75;
-
-}
-
-/* =========================
-   LINK CREDITOS
+   CREDITOS
 ========================= */
 
 .link-andrevisuales{
 
-    color:var(--brown);
-
-    font-weight:700;
+    color:var(--kisse-brown);
 
     text-decoration:none;
 
-    transition:0.2s ease;
-
-}
-
-.link-andrevisuales:hover{
-
-    opacity:0.6;
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-    .menu__logo{
-
-        width:150px;
-
-    }
-
-    .links-kisse{
-
-        padding-top:30px;
-
-    }
-
-    .links-kisse__btn{
-
-        padding:18px 20px;
-
-        font-size:16px;
-
-        border-radius:22px;
-
-    }
-
-    .box__redes a{
-
-        width:54px;
-
-        height:54px;
-
-        font-size:22px;
-
-    }
-
-}
-
-/* =========================
-   EXTRA SMALL
-========================= */
-
-@media(max-width:480px){
-
-    .links-kisse__btn{
-
-        font-size:15px;
-
-        gap:10px;
-
-    }
+    font-weight:700;
 
 }
