@@ -21,28 +21,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<!-- Light mode -->
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="logo/Kisse_logo_dark.svg"
-  media="(prefers-color-scheme: light)"
->
 
-<!-- Dark mode -->
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="logo/Kisse_logo_light.svg"
-  media="(prefers-color-scheme: dark)"
->
+<link id="favicon" rel="icon" type="image/svg+xml">
 
-<!-- Fallback -->
+<script>
+const favicon = document.getElementById("favicon");
+
+function setFavicon() {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  favicon.href = darkMode
+    ? "logo/Kisse_logo_light.svg?dark"
+    : "logo/Kisse_logo_dark.svg?light";
+}
+
+setFavicon();
+
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", setFavicon);
+</script>
+
 <link
   rel="icon"
   href="logo/logo-kisse.ico"
   type="image/x-icon"
 >
+
+    
     <link rel="stylesheet" href="css/estilo.css">
     <title>KISSÉ | Laboratorio de experiencias</title>
 
