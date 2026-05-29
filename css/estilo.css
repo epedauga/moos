@@ -185,7 +185,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.3px;
   text-align: justify;
-  background: #F9CBDF;
+  background: #f7cade;
   background-size: cover;
   background-attachment: fixed;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><rect rx='20' width='100%' height='100%' fill='rgb(53, 102, 171)'/></svg>") 0 0, auto; }
