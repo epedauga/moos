@@ -1,6 +1,10 @@
-/* =========================================
+/* =========================================================
+   KISSÉ — MAIN STYLE
+========================================================= */
+
+/* =========================
    RESET
-========================================= */
+========================= */
 
 *{
     margin:0;
@@ -8,19 +12,19 @@
     box-sizing:border-box;
 }
 
-/* =========================================
-   PALETA
-========================================= */
+/* =========================
+   VARIABLES
+========================= */
 
 :root{
 
     --pink:#E5C3D2;
-    --pink-light:#F8EAF0;
+    --pink-light:#F7E8EF;
 
     --cream:#F6EFCF;
 
     --brown:#5A1D0F;
-    --brown-dark:#3B1208;
+    --brown-dark:#3F1308;
 
     --white:#FFFFFF;
 
@@ -28,398 +32,340 @@
 
 }
 
-/* =========================================
+/* =========================
    BODY
-========================================= */
+========================= */
 
 body{
 
-    font-family:Arial,sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 
     background:
     linear-gradient(
-        to bottom,
+        180deg,
         var(--pink-light) 0%,
-        #FDF7FA 60%,
+        #FFF8FB 60%,
         var(--cream) 100%
     );
 
-    min-height:100vh;
-
-    padding:20px;
-
     color:var(--text);
 
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.container{
-
-    max-width:600px;
-
-    margin:auto;
-
-    background:rgba(255,255,255,0.78);
-
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
-
-    border-radius:30px;
-
-    padding:28px;
-
-    border:1px solid rgba(255,255,255,0.6);
-
-    box-shadow:
-        0 10px 40px rgba(90,29,15,0.08);
+    overflow-x:hidden;
 
 }
 
-/* =========================================
-   TITULO
-========================================= */
+/* =========================
+   HEADER
+========================= */
 
-h1{
+header{
 
-    text-align:center;
+    background:transparent !important;
 
-    font-size:34px;
-
-    color:var(--brown);
-
-    margin-bottom:28px;
-
-    font-weight:800;
-
-    letter-spacing:-1px;
+    padding-top:20px;
 
 }
 
-/* =========================================
-   LABELS
-========================================= */
+/* =========================
+   NAVBAR
+========================= */
 
-label{
+.menu{
+
+    background:transparent !important;
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.menu__logo{
+
+    width:180px;
 
     display:block;
 
-    margin-top:18px;
-    margin-bottom:8px;
+    margin:auto;
 
-    font-size:14px;
+    transition:0.3s ease;
 
-    font-weight:700;
+}
+
+.menu__logo:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* =========================
+   LINKS SECTION
+========================= */
+
+.links-kisse{
+
+    padding:50px 20px 80px;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.links-kisse__container{
+
+    max-width:520px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.links-kisse__btn{
+
+    background:rgba(255,255,255,0.72);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.5);
+
+    border-radius:26px;
+
+    padding:20px 24px;
+
+    text-decoration:none;
 
     color:var(--brown);
-
-}
-
-/* =========================================
-   INPUTS
-========================================= */
-
-input,
-select{
-
-    width:100%;
-
-    padding:16px;
-
-    border-radius:16px;
-
-    border:2px solid #F0DDE5;
-
-    background:white;
-
-    font-size:16px;
-
-    color:var(--text);
-
-    transition:0.2s ease;
-
-}
-
-/* =========================================
-   FOCUS
-========================================= */
-
-input:focus,
-select:focus{
-
-    outline:none;
-
-    border-color:var(--brown);
-
-    box-shadow:
-        0 0 0 4px rgba(90,29,15,0.08);
-
-}
-
-/* =========================================
-   SECCIONES
-========================================= */
-
-.section{
-
-    margin-top:24px;
-
-    background:#FFF9FB;
-
-    border:1px solid #F1DCE4;
-
-    border-radius:24px;
-
-    padding:22px;
-
-}
-
-/* =========================================
-   SUBTITULOS
-========================================= */
-
-.section h2{
-
-    color:var(--brown);
-
-    margin-bottom:10px;
-
-    font-size:22px;
-
-}
-
-/* =========================================
-   BOTON PRINCIPAL
-========================================= */
-
-button{
-
-    width:100%;
-
-    border:none;
-
-    padding:18px;
-
-    border-radius:18px;
-
-    margin-top:28px;
-
-    background:var(--brown);
-
-    color:white;
 
     font-size:17px;
 
     font-weight:700;
 
-    cursor:pointer;
+    display:flex;
 
-    transition:0.2s ease;
+    align-items:center;
+
+    gap:14px;
+
+    transition:0.25s ease;
 
     box-shadow:
-        0 8px 20px rgba(90,29,15,0.15);
+        0 10px 30px rgba(90,29,15,0.08);
 
 }
 
-/* =========================================
-   HOVER BOTON
-========================================= */
+/* =========================
+   ICONS
+========================= */
 
-button:hover{
+.links-kisse__btn i{
 
-    transform:translateY(-2px);
+    font-size:20px;
 
-    background:var(--brown-dark);
+    width:22px;
 
-}
-
-/* =========================================
-   ACTIVE
-========================================= */
-
-button:active{
-
-    transform:scale(0.98);
+    text-align:center;
 
 }
 
-/* =========================================
-   QUICK BUTTONS
-========================================= */
+/* =========================
+   BUTTON HOVER
+========================= */
 
-.quick-products{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:12px;
-
-    margin-top:12px;
-
-}
-
-.quick-btn{
-
-    background:white;
-
-    color:var(--brown);
-
-    border:2px solid #E8D2DB;
-
-    border-radius:18px;
-
-    padding:14px;
-
-    font-weight:700;
-
-    transition:0.2s ease;
-
-    box-shadow:none;
-
-}
-
-.quick-btn:hover{
-
-    border-color:var(--brown);
-
-    background:#FFF7FA;
-
-}
-
-.quick-btn.active{
+.links-kisse__btn:hover{
 
     background:var(--brown);
 
     color:white;
 
-    border-color:var(--brown);
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(90,29,15,0.18);
 
 }
 
-/* =========================================
-   SUCCESS
-========================================= */
+/* =========================
+   FOOTER
+========================= */
 
-.success{
+.box{
 
-    margin-top:22px;
-
-    padding:16px;
-
-    border-radius:18px;
-
-    background:var(--cream);
-
-    color:var(--brown);
+    padding:20px 20px 50px;
 
     text-align:center;
 
+    background:transparent;
+
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.box__redes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:28px;
+
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.box__redes a{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,0.75);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.5);
+
+    color:var(--brown);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    transition:0.25s ease;
+
+    box-shadow:
+        0 8px 20px rgba(90,29,15,0.08);
+
+}
+
+/* =========================
+   SOCIAL HOVER
+========================= */
+
+.box__redes a:hover{
+
+    background:var(--brown);
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================
+   TEXT FOOTER
+========================= */
+
+.box p{
+
+    color:var(--brown);
+
+    font-size:14px;
+
+    opacity:0.75;
+
+}
+
+/* =========================
+   LINK CREDITOS
+========================= */
+
+.link-andrevisuales{
+
+    color:var(--brown);
+
     font-weight:700;
 
-    border:1px solid rgba(90,29,15,0.15);
+    text-decoration:none;
 
-    display:none;
-
-}
-
-/* =========================================
-   HIDDEN
-========================================= */
-
-.hidden{
-
-    display:none;
+    transition:0.2s ease;
 
 }
 
-/* =========================================
-   LOADING
-========================================= */
+.link-andrevisuales:hover{
 
-.loading{
-
-    opacity:0.7;
-
-    pointer-events:none;
+    opacity:0.6;
 
 }
 
-/* =========================================
-   SCROLLBAR
-========================================= */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#F8EAF0;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#D6AFC0;
-
-    border-radius:20px;
-
-}
-
-/* =========================================
-   PLACEHOLDER
-========================================= */
-
-::placeholder{
-
-    color:#B8929F;
-
-}
-
-/* =========================================
+/* =========================
    MOBILE
-========================================= */
+========================= */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-    body{
+    .menu__logo{
 
-        padding:12px;
-
-    }
-
-    .container{
-
-        padding:20px;
-
-        border-radius:24px;
+        width:150px;
 
     }
 
-    h1{
+    .links-kisse{
 
-        font-size:28px;
+        padding-top:30px;
 
     }
 
-    input,
-    select{
+    .links-kisse__btn{
 
-        padding:15px;
+        padding:18px 20px;
+
+        font-size:16px;
+
+        border-radius:22px;
+
+    }
+
+    .box__redes a{
+
+        width:54px;
+
+        height:54px;
+
+        font-size:22px;
+
+    }
+
+}
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media(max-width:480px){
+
+    .links-kisse__btn{
 
         font-size:15px;
 
-    }
-
-    button{
-
-        padding:16px;
+        gap:10px;
 
     }
 
