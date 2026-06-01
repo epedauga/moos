@@ -397,7 +397,7 @@ p {
 }
 
 .btn-volver:hover {
-  background-: #F9CBDF;
+  background: #F9CBDF;
   color: #492119;
   opacity: 0.75;
   transform: translateY(-2px);
