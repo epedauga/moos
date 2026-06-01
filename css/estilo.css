@@ -324,7 +324,7 @@ p {
 .links-kisse__btn:hover {
   transform: translateY(-3px);
   background-color: #F9CBDF;
-  color: #fcf5bf;
+  color: #492119;
 }
 
 
@@ -394,8 +394,9 @@ p {
 }
 
 .btn-volver:hover {
-  background: #F9CBDF;
-  color: #fcf5bf;
+  background-: #F9CBDF;
+  color: #492119;
+  opacity: 0.75;
   transform: translateY(-2px);
 }
 
