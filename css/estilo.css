@@ -69,7 +69,7 @@
 
 .menu {
   background: none;
-  padding-top: 1rem;
+  padding: 15px 20px;
 }
 
 .menu .container-fluid {
@@ -79,37 +79,29 @@
 }
 
 .menu__logo {
-  width: 9rem;
-  padding: 0;
-  display: block;
+  width: 12rem;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Mobile */
 @media (max-width: 576px) {
   .menu__logo {
-    width: 6rem;
+    width: 9rem;
   }
 }
 
 /* Tablet */
 @media (min-width: 577px) and (max-width: 991px) {
   .menu__logo {
-    width: 7.5rem;
+    width: 11rem;
   }
 }
 
 /* Desktop */
 @media (min-width: 992px) {
   .menu__logo {
-    width: 9rem;
-  }
-}
-
-
-
-@media (min-width: 992px) {
-  .menu__logo {
-    width: 9rem;
+    width: 12rem;
   }
 }
 
