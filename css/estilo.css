@@ -528,6 +528,7 @@ a.btn-kisse:active {
   padding: 10px 24px;
   background-color: #F9CBDF;
   color: #492119;
+  opacity: 0.75;
   text-decoration: none;
   border-radius: 40px;
   box-shadow: 0px 6px 16px rgba(0,0,0,.18);
@@ -547,6 +548,7 @@ a.btn-kisse:active {
   height: 22px;
   background-color: #492119;
   color: #F9CBDF;
+  opacity: 0.75;
   border-radius: 50%;
   font-size: 11px;
   transition: all .3s ease;
