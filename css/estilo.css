@@ -390,6 +390,7 @@ p {
   padding: 14px 28px;
   background: #492119;
   color: #F9CBDF;
+  opacity: 0.75;
   text-decoration: none;
   border-radius: 30px;
   box-shadow: 0px 4px 10px rgba(0,0,0,.2);
@@ -525,8 +526,8 @@ a.btn-kisse:active {
   gap: 10px;
   font-size: 15px;
   padding: 10px 24px;
-  background: #fbf4e8;
-  color: #8b3a62;
+  background-color: #492119;
+  color: #F9CBDF;
   text-decoration: none;
   border-radius: 40px;
   box-shadow: 0px 6px 16px rgba(0,0,0,.18);
@@ -544,8 +545,8 @@ a.btn-kisse:active {
   justify-content: center;
   width: 22px;
   height: 22px;
-  background: #8b3a62;
-  color: #fbf4e8;
+  background-color: #492119;
+  color: #F9CBDF;
   border-radius: 50%;
   font-size: 11px;
   transition: all .3s ease;
@@ -562,12 +563,12 @@ a.btn-kisse:active {
 }
 
 .playlist-card:hover .play-btn {
-  background: #c35b8e;
-  color: #fbf4e8;
+  background-color: #F9CBDF;
+  color: #492119;
   transform: translateY(-3px);
 }
 
 .playlist-card:hover .play-btn::before {
-  background: #fbf4e8;
-  color: #c35b8e;
+  background-color: #F9CBDF;
+  color: #492119;
 }
