@@ -569,6 +569,6 @@ a.btn-kisse:active {
 }
 
 .playlist-card:hover .play-btn::before {
-  background-color: #F9CBDF;
-  color: #492119;
+  background-color: #492119;
+  color: #F9CBDF;
 }
