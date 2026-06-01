@@ -26,25 +26,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-<link rel="icon" href="/logo/light.svg" media="(prefers-color-scheme: light)">
-<link rel="icon" href="/logo/dark.svg" media="(prefers-color-scheme: dark)">
+<link id="favicon" rel="icon" type="image/svg+xml">
 
 <script>
-const favicon = document.getElementById("favicon");
+  const favicon = document.getElementById("favicon");
 
-function setFavicon() {
-  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  function setFavicon() {
+    const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  favicon.href = darkMode
-    ? "logo/Kisse_logo_light.svg?dark"
-    : "logo/Kisse_logo_dark.svg?light";
-}
+    favicon.href = darkMode
+      ? "logo/Kisse_logo_light.svg?dark"
+      : "logo/Kisse_logo_dark.svg?light";
+  }
 
-setFavicon();
+  setFavicon();
 
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", setFavicon);
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", setFavicon);
 </script>
 
     
