@@ -276,55 +276,155 @@ p {
 }
 
 
-/* LINKTREE KISSÉ */
+/* =========================
+   CONTAINER GENERAL
+========================= */
 .links-kisse {
   padding: 60px 120px;
   text-align: center;
+
+  background: radial-gradient(circle at top, #F9CBDF 0%, #fff 45%, #f7efe9 100%);
 }
 
+/* =========================
+   RESPONSIVE PADDING (TU BASE MEJORADA)
+========================= */
 @media (max-width: 1024px) {
-  .links-kisse {
-    padding: 40px 80px;
-  }
+  .links-kisse { padding: 50px 80px; }
 }
 
 @media (max-width: 768px) {
-  .links-kisse {
-    padding: 30px 60px;
-  }
+  .links-kisse { padding: 40px 30px; }
 }
 
 @media (max-width: 576px) {
-  .links-kisse {
-    padding: 20px 30px;
-  }
+  .links-kisse { padding: 35px 18px; }
 }
 
+/* =========================
+   CONTAINER LINKS
+========================= */
 .links-kisse__container {
   max-width: 420px;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
+/* =========================
+   BOTONES → CARDS MODERNAS
+========================= */
 .links-kisse__btn {
+  position: relative;
   display: block;
-  padding: 16px;
-  background-color: #492119;
-  color: #F9CBDF;
-  opacity: 0.75;
+  padding: 18px 18px;
+  border-radius: 18px;
+
   text-decoration: none;
   font-weight: 600;
-  border-radius: 14px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,.15);
+
+  /* look premium */
+  background: linear-gradient(135deg, #492119, #2f120e);
+  color: #F9CBDF;
+
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  overflow: hidden;
+
   transition: all .3s ease;
 }
 
+/* glow moderno */
+.links-kisse__btn::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(249, 203, 223, 0.18);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+
+  transition: all .5s ease;
+}
+
+/* hover interacción más viva */
 .links-kisse__btn:hover {
-  transform: translateY(-3px);
-  background-color: #F9CBDF;
+  transform: translateY(-5px);
+}
+
+.links-kisse__btn:hover::after {
+  transform: scale(3);
+  opacity: 0;
+}
+
+/* texto dentro del botón */
+.links-kisse__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* si tienes iconos o spans internos */
+.links-kisse__btn span {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.links-kisse__btn small {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* =========================
+   VARIANTE DESTACADA (WhatsApp u oferta)
+========================= */
+.links-kisse__btn--primary {
+  background: linear-gradient(135deg, #F9CBDF, #fff);
   color: #492119;
+}
+
+.links-kisse__btn--primary small {
+  color: #5a3a33;
+}
+
+/* =========================
+   HOVER GENERAL (fallback extra)
+========================= */
+.links-kisse__btn:hover {
+  filter: brightness(1.05);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+/* tablet */
+@media (max-width: 768px) {
+  .links-kisse__btn {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .links-kisse__btn {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .links-kisse__container {
+    gap: 12px;
+  }
+}
+
+/* mobile pequeño */
+@media (max-width: 375px) {
+  .links-kisse__btn {
+    padding: 14px;
+  }
 }
 
 
