@@ -39,30 +39,6 @@
     margin-right: 30px;
 }
 
-/*.container {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "part1 foto";
-}
-
-.part1 { grid-area: part1; 
-  width: 50%;
-}
-
-.foto { grid-area: foto;
-  width: 50%;
-}
-
-.part1 h1 {
-  font-size: 60px;
-  font-family: Arial, sans-serif;
-  
-}*/
-
 .container {  
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -79,7 +55,6 @@
 .foto { grid-area: foto;
   
 }
-
 
 
 .part1 h1 {
